@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+label {
+  display: inline-block;
+  width: 35%;
+  font-size: 1.25rem;
+  margin-left: 5rem;
+  color: white;
+  font-family: "Mohave", sans-serif;
+}
+.form {
+  background-color: rgb(4, 47, 80);
+}
+.view {
+  margin: 1rem;
+  font-family: "Mohave", sans-serif;
+  margin-left: 4rem;
+}
+input,
+textarea,
+select {
+  padding: 0.5rem;
+  border-radius: 1px;
+  border: black;
+  border-width: 1px;
+  margin: 0.5rem;
+  font-family: "Mohave", sans-serif;
+  font-size: 1.25rem;
+  border-style: solid;
+  width: 20%;
+}
+select {
+  width: 21%;
+}
+input[type="submit"] {
+  padding: 1rem;
+  border-radius: 1px;
+  border: black;
+  border-width: 1px;
+  margin: 0.5rem;
+  font-family: "Mohave", sans-serif;
+  font-size: 1.25rem;
+  border-style: solid;
+  width: 20%;
+  background-color: rgb(46, 87, 11);
+  color: white;
+  margin-left: 30rem;
+}
+.spanCanvea {
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
