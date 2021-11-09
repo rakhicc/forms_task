@@ -1,6 +1,6 @@
 # React app to familiarise with forms and passing data and functions between components.
 
-## created Form with input fiels
+## created Form with input fields
 
 - Firstname
 - lastname
@@ -8,7 +8,7 @@
 - Role
 - Message
 
-## Pop up functionality implemented
+## Pop up functionality implemented using conditional rendering and css styles.
 
 ## screenshot
 
