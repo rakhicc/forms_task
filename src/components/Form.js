@@ -3,7 +3,7 @@ import React from "react";
 const Form = (props) => {
   return (
     <div className="form">
-      <form>
+      <form onSubmit={props.popUp}>
         <label htmlFor="firstName" id="firstName">
           First name
         </label>
