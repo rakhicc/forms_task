@@ -1,21 +1,21 @@
-const View = (props) => {
+const View = ({firstName,lastName,PhoneNumber,role,message}) => {
   return (
     <div className="view">
      {/*  <h1>This is your input:</h1> */}
       <p>
-        First name:<span className="spanCanvea"> {props.firstName}</span>
+        First name:<span className="spanCanvea"> {firstName}</span>
       </p>
       <p>
-        Last name:<span className="spanCanvea"> {props.lastName}</span>
+        Last name:<span className="spanCanvea"> {lastName}</span>
       </p>
       <p>
-        Phone number:<span className="spanCanvea"> {props.PhoneNumber}</span>
+        Phone number:<span className="spanCanvea"> {PhoneNumber}</span>
       </p>
       <p>
-        Role: <span className="spanCanvea">{props.role}</span>
+        Role: <span className="spanCanvea">{role}</span>
       </p>
       <p>
-        Message:<span className="spanCanvea"> {props.message}</span>
+        Message:<span className="spanCanvea"> {message}</span>
       </p>
     </div>
   );

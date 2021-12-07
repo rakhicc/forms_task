@@ -56,6 +56,10 @@ select {
   text-align: center;
   font-size: 1rem;
 }
+.notes p {
+  font-family: "Mohave", sans-serif;
+  font-size: 1.5rem;
+}
 input[type="submit"],
 .primary {
   padding: 1rem;

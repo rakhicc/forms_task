@@ -3,25 +3,25 @@ import React from "react";
 const closeHandler = () => {
   window.location.reload();
 };
-const Popup = (props) => {
+const Popup = ({firstName,lastName,PhoneNumber,role,message}) => {
   return (
     <div className="overlay">
       <div className="popUpDiv">
         <h1>Your note:</h1>
         <p>
-          First name:<span className="spanCanvea"> {props.firstName}</span>
+          First name:<span className="spanCanvea"> {firstName}</span>
         </p>
         <p>
-          Last name:<span className="spanCanvea"> {props.lastName}</span>
+          Last name:<span className="spanCanvea"> {lastName}</span>
         </p>
         <p>
-          Phone number:<span className="spanCanvea"> {props.PhoneNumber}</span>
+          Phone number:<span className="spanCanvea"> {PhoneNumber}</span>
         </p>
         <p>
-          Role: <span className="spanCanvea">{props.role}</span>
+          Role: <span className="spanCanvea">{role}</span>
         </p>
         <p>
-          Message:<span className="spanCanvea"> {props.message}</span>
+          Message:<span className="spanCanvea"> {message}</span>
         </p>
         <div className="buttons">
           <button type="submit" className="primary" onClick={closeHandler}>
