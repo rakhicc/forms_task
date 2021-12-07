@@ -10,6 +10,8 @@
 
 ## Pop up functionality implemented using conditional rendering and css styles.
 
+## Used json-server to get data from json file and post data to json file using axios
+
 ## screenshot
 
 - ![screenshot of app](form.png)
