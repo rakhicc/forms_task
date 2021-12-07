@@ -5,6 +5,8 @@ import View from "./components/View";
 import Popup from "./components/Popup";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Notes from "./components/Notes";
+import axios from "axios";
 class App extends Component {
   state = {
     firstName: "",
@@ -13,7 +15,15 @@ class App extends Component {
     role: "",
     message: "",
     showPopup: false,
+    data:[],
   };
+  componentDidMount(){
+    axios.get("http://localhost:3001/notes").then((res)=>{
+      this.setState({data:res.data})
+      console.log(res);
+      console.log(res.data);
+    });
+  }
   textHandler = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -39,10 +49,16 @@ class App extends Component {
     };
     return (
       <div>
+        
         <Header />
+        <div className="formArea">
         <Form change={this.textHandler} popUp={this.clickHandler} />
-        <View {...props} />
+        <View {...props} /></div>
         {this.state.showPopup && <Popup {...props} />}
+       {this.state.data.map((note)=>(
+        <Notes {...note}/>
+       ))}
+       
         <Footer />
       </div>
     );

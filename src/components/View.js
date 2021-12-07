@@ -1,7 +1,7 @@
 const View = (props) => {
   return (
     <div className="view">
-      <h1>This is your input:</h1>
+     {/*  <h1>This is your input:</h1> */}
       <p>
         First name:<span className="spanCanvea"> {props.firstName}</span>
       </p>

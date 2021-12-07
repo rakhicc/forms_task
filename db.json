@@ -1,0 +1,28 @@
+{
+ "notes" :[
+     {
+         "id":1,
+         "firstname":"Mary",
+         "lastname":"Sarah",
+         "phonenumber":"0998877656",
+         "role":"developer",
+         "message":"this is my importnat message"
+     },
+     {
+        "id":2,
+        "firstname":"Rakhi",
+        "lastname":"Chandran Chirayil",
+        "phonenumber":"0449881977",
+        "role":"developer",
+        "message":"Really importnat message"
+    },
+    {
+        "id":3,
+        "firstname":"Richard",
+        "lastname":"Oliver",
+        "phonenumber":"0998855656",
+        "role":"tester",
+        "message":"this is an importnat message"
+    }
+ ]  
+}
