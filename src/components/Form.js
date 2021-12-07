@@ -29,7 +29,7 @@ const Form = ({popUp,change}) => {
         </label>
         <input
           type="text"
-          name="PhoneNumber"
+          name="phoneNumber"
           id="PhoneNumber"
           onChange={change}
           required
@@ -37,8 +37,10 @@ const Form = ({popUp,change}) => {
         <label htmlFor="role" id="role">
           Role
         </label>
-        <select name="role" id="role" onChange={change}>
+        <select name="role" id="role" onChange={change} required>
+        <option value="" disabled></option>
           <option value="developer">Developer</option>
+          <option value="teacher">Teacher</option>
           <option value="tester">Tester</option>
         </select>
         <label htmlFor="message" id="message">

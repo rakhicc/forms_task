@@ -9,11 +9,12 @@ import Notes from "./components/Notes";
 import axios from "axios";
 class App extends Component {
   state = {
-    firstName: "",
+    inputData:{firstName: "",
     lastName: "",
-    PhoneNumber: "",
+    phoneNumber: "",
     role: "",
     message: "",
+  },
     showPopup: false,
     data:[],
   };
@@ -26,7 +27,8 @@ class App extends Component {
   }
   textHandler = (event) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      inputData:{...this.state.inputData,[event.target.name]: event.target.value}
+      ,
     });
   };
   clickHandler = (e) => {
@@ -36,27 +38,34 @@ class App extends Component {
       showPopup: true,
     });
   };
+  postHandler=()=>{
+    axios.post('http://localhost:3001/notes', 
+      this.state.inputData).then((res) => {
+      console.log(res);
+      this.setState({showPopup:false})
+      window.location.reload();
+    })
+    .catch( (error)=> {
+      console.log(error);
+    });
+  }
+
+  
   style = {
     display: "none",
   };
   render() {
-    const props = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      PhoneNumber: this.state.PhoneNumber,
-      role: this.state.role,
-      message: this.state.message,
-    };
+    
     return (
       <div>
         
         <Header />
         <div className="formArea">
         <Form change={this.textHandler} popUp={this.clickHandler} />
-        <View {...props} /></div>
-        {this.state.showPopup && <Popup {...props} />}
+        <View {...this.state.inputData} /></div>
+        {this.state.showPopup && <Popup {...this.state.inputData} post={this.postHandler}/>}
        {this.state.data.map((note)=>(
-        <Notes {...note}/>
+        <Notes {...note} key={note.id}/>
        ))}
        
         <Footer />
