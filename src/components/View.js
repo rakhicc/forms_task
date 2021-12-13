@@ -1,4 +1,4 @@
-const View = ({firstName,lastName,PhoneNumber,role,message}) => {
+const View = ({firstName,lastName,phoneNumber,role,message}) => {
   return (
     <div className="view">
      {/*  <h1>This is your input:</h1> */}
@@ -9,7 +9,7 @@ const View = ({firstName,lastName,PhoneNumber,role,message}) => {
         Last name:<span className="spanCanvea"> {lastName}</span>
       </p>
       <p>
-        Phone number:<span className="spanCanvea"> {PhoneNumber}</span>
+        Phone number:<span className="spanCanvea"> {phoneNumber}</span>
       </p>
       <p>
         Role: <span className="spanCanvea">{role}</span>

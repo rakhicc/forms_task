@@ -14,5 +14,6 @@
 
 ## screenshot
 
-- ![screenshot of app](form.png)
-- ![screenshot of app](popup.png)
+- ![screenshot of Form page](form.png)
+- ![screenshot of Pop up component](popup.png)
+- ![screenshot of the data from db.json file](posteddata.png)
